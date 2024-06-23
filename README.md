@@ -35,17 +35,51 @@ The Random Forest algorithm is an ensemble learning method that combines multipl
 
 In this project, the Random Forest algorithm is used to predict the winner of T20 cricket matches. The model considers features such as the teams playing, the toss winner, the venue, and the gender of the teams. By training on historical match data, the Random Forest model learns patterns and relationships that help it make predictions for new matches.
 
-## Usage
+## Evaluation Metrics
 
-### Prerequisites
+- **Precision**: High precision indicates that the model is accurate when it predicts a positive class. A low precision means there are many false positives.
+- **Recall**: High recall indicates that the model is good at capturing all the positive instances. A low recall means there are many false negatives.
+- **F1-Score**: The F1-score is a balance between precision and recall. A high F1-score means the model has a good balance between precision and recall.
+- **Support**: This tells us how many actual instances of each class there are in the dataset. It provides context for interpreting the other metrics.
+
+## Limitations
+
+While the model provides useful predictions, there are several limitations to be aware of:
+
+1. **Player Performance**: The model does not account for individual player performance, which can significantly impact the outcome of a match. Factors such as form, injuries, and player matchups are not included in the dataset.
+2. **Weather Conditions**: Weather conditions can greatly influence the outcome of a cricket match, but they are not considered in the current model.
+3. **Team Composition**: The model does not take into account the specific composition of the teams, such as the presence of key players or the balance between batsmen and bowlers.
+4. **Venue Factors**: While the venue is included as a feature, detailed conditions of the pitch and ground are not considered.
+5. **Historical Data**: The model is trained on historical data, which means it might not fully capture the dynamics of current team strengths and strategies.
+6. **External Factors**: Other factors such as team morale, recent performance trends, and off-field issues are not included in the model.
+
+Addressing these limitations could improve the accuracy and reliability of the predictions. Future work could involve integrating more detailed data on player performance and conditions.
+
+## Files in This Repository
+
+- `cricket_match_predictor.py`: The main script that downloads data, preprocesses it, trains the model, and evaluates its performance.
+- `random_forest_model.joblib`: The trained Random Forest model saved as a joblib file.
+- `combined_matches.jsonl`: The combined match data saved in JSON Lines format.
+- `tree.dot`: A DOT file for visualizing one of the trees in the Random Forest.
+
+## How to Run
+
+1. Ensure you have Python and the required libraries installed.
+2. Download the data by running the script `cricket_match_predictor.py`.
+3. The model will be trained, evaluated, and saved as `random_forest_model.joblib`.
+4. Use the model to make predictions on new match data as demonstrated in the script.
+
+## Requirements
 
 - Python 3.x
-- Required Python libraries: `requests`, `zipfile`, `pandas`, `json`, `sklearn`, `joblib`, `graphviz`
+- pandas
+- requests
+- scikit-learn
+- joblib
+- graphviz
 
-### Installation
+Install the required libraries using:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/cricket-match-predictor.git
-   cd cricket-match-predictor
+```bash
+pip install pandas requests scikit-learn joblib graphviz
 
