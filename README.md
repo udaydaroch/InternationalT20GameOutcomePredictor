@@ -37,10 +37,10 @@ In this project, the Random Forest algorithm is used to predict the winner of T2
 
 ## Evaluation Metrics
 
-- **Precision**: High precision indicates that the model is accurate when it predicts a positive class. A low precision means there are many false positives.
-- **Recall**: High recall indicates that the model is good at capturing all the positive instances. A low recall means there are many false negatives.
-- **F1-Score**: The F1-score is a balance between precision and recall. A high F1-score means the model has a good balance between precision and recall.
-- **Support**: This tells us how many actual instances of each class there are in the dataset. It provides context for interpreting the other metrics.
+1. **Precision**: High precision indicates that the model is accurate when it predicts a positive class. A low precision means there are many false positives.
+2. **Recall**: High recall indicates that the model is good at capturing all the positive instances. A low recall means there are many false negatives.
+3. **F1-Score**: The F1-score is a balance between precision and recall. A high F1-score means the model has a good balance between precision and recall.
+4. **Support**: This tells us how many actual instances of each class there are in the dataset. It provides context for interpreting the other metrics.
 
 ## Limitations
 
@@ -57,10 +57,10 @@ Addressing these limitations could improve the accuracy and reliability of the p
 
 ## Files in This Repository
 
-- `cricket_match_predictor.py`: The main script that downloads data, preprocesses it, trains the model, and evaluates its performance.
-- `random_forest_model.joblib`: The trained Random Forest model saved as a joblib file.
-- `combined_matches.jsonl`: The combined match data saved in JSON Lines format.
-- `tree.dot`: A DOT file for visualizing one of the trees in the Random Forest.
+1. `cricket_match_predictor.py`: The main script that downloads data, preprocesses it, trains the model, and evaluates its performance.
+2. `random_forest_model.joblib`: The trained Random Forest model saved as a joblib file.
+3. `combined_matches.jsonl`: The combined match data saved in JSON Lines format.
+4. `tree.dot`: A DOT file for visualizing one of the trees in the Random Forest.
 
 ## How to Run
 
@@ -71,12 +71,12 @@ Addressing these limitations could improve the accuracy and reliability of the p
 
 ## Requirements
 
-- Python 3.x
-- pandas
-- requests
-- scikit-learn
-- joblib
-- graphviz
+1. Python 3.x
+2. pandas
+3. requests
+4. scikit-learn
+5. joblib
+6. graphviz
 
 Install the required libraries using:
 
