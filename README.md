@@ -52,7 +52,7 @@ While the model provides useful predictions, there are several limitations to be
 4. **Venue Factors**: While the venue is included as a feature, detailed conditions of the pitch and ground are not considered.
 5. **Historical Data**: The model is trained on historical data, which means it might not fully capture the dynamics of current team strengths and strategies.
 6. **External Factors**: Other factors such as team morale, recent performance trends, and off-field issues are not included in the model.
-
+7. **DataSet Size**: The model is trained with only 3450 matches, which is perhaps not sufficient to generate accurate predictions.
 Addressing these limitations could improve the accuracy and reliability of the predictions. Future work could involve integrating more detailed data on player performance and conditions.
 
 ## Files in This Repository
